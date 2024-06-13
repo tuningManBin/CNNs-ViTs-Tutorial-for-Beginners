@@ -181,7 +181,7 @@ class WideResNet(nn.Module):
 def wideresnet_28_10_cifar10(in_channels=3, widen_factor=10, num_features=16, logits=10, pool_stride=0,
                              dataset="cifar-10", normalize=True, return_feature_map=False):
     """
-    A version deploying wide-resnet28-10 to CIFAR-10.
+    A version deploying wide-resnet-28-10 to CIFAR-10.
     """
     return WideResNet(num_blocks=[4, 4, 4], in_channels=in_channels, widen_factor=widen_factor, pool_stride=pool_stride,
                       num_features=num_features, logits=logits, dataset=dataset,
@@ -191,7 +191,7 @@ def wideresnet_28_10_cifar10(in_channels=3, widen_factor=10, num_features=16, lo
 def wideresnet_28_10_mnist(in_channels=1, widen_factor=10, num_features=16, logits=10, pool_stride=0,
                            dataset="mnist", normalize=True, return_feature_map=False):
     """
-    A version deploying wide-resnet28-10 to MNIST.
+    A version deploying wide-resnet-28-10 to MNIST.
     """
     return WideResNet(num_blocks=[4, 4, 4], in_channels=in_channels, widen_factor=widen_factor, pool_stride=pool_stride,
                       num_features=num_features, logits=logits, dataset=dataset,
@@ -208,4 +208,3 @@ if __name__ == "__main__":
     test_sample1 = torch.rand([2, 1, 28, 28])
     pred1 = net1(test_sample1)
     print(pred1.shape)
-nn.CrossEntropyLoss(reduction='mean')
