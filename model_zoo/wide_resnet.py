@@ -162,7 +162,6 @@ class WideResNet(nn.Module):
 
         if self.pool_stride != 0:
             images = self.pool(images)
-            assert self.pool_stride != 0, f"pool_stride is 0"
 
         out = self.init_block(images)
 
