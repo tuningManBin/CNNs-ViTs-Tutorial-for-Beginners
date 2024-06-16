@@ -119,7 +119,7 @@ class MLP(nn.Module):
         """
         Arguments:
             input_dim (int): the dimensions of input tensor
-            hidden_dim (int): the dimensions of output tensor in linear layer
+            hidden_dim (int): the dimensions of output tensor in hidden layer
             output_dim (int): the dimensions of output tensor
             activation (nn.modules.activation): activation function
             drop_rate (float): probability of an element to be zeroed
